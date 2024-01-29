@@ -21,7 +21,7 @@
                     <div class="todolist-container">
                         <ul class="list-unstyled ">
                             <li v-for="todo, key in todoList" :key="key">
-                                <div class="todo_content" :class="todo.done ? 'text-decoration-line-through' : ''">
+                                <div class="todo_content" :class="todo.done ? 'text-decoration-line-through' : ''" @click="todoList[key].done = !todoList[key].done">
                                     <span>{{todo.name}}</span>
                                 </div>
                             </li>
