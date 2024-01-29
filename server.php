@@ -21,6 +21,14 @@ if (isset($_POST['name'])) {
     file_put_contents('todo-list.json', json_encode($list));
 }
 
+// verifico se tramite chiamate DELETE è stata chiesta la cancellazione di un Todo dalla lista
+if (isset($_POST['index'])) {
+    unset($list[$_POST['index']]);
+
+    // salvo la modifica nel file todo-list.json
+    file_put_contents('todo-list.json', json_encode($list));
+}
+
 // aggiungo all'header della risposta che sto passando un dato JSON
 header('Content-Type: application/json');
 

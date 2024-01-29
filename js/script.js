@@ -34,6 +34,20 @@ createApp({
                 this.todoNew = '';
                 this.todoList = response.data;
             });
+        },
+
+        // metodo per eliminare un Todo dalla lista
+        removeTodo(key) {
+            const data = {
+                index: key
+            }
+
+            // passiamo la variabile appena creata alla chiamata POST 
+            axios.post(this.apiUrl, data, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            }).then((response) => {
+                this.todoList = response.data;
+            });
         }
-    },
+    }
 }).mount('#app')
