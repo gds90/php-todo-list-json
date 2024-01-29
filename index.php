@@ -29,8 +29,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <input type="text" class="my-2 form-control " name="todoItem" placeholder="Inserisci nuovo To Do">
-                    <button class="btn btn-success ">Aggiungi</button>
+                    <input type="text" class="my-2 form-control " name="todo" placeholder="Inserisci nuovo To Do" @keyup.enter="addTodo" v-model="todoNew">
+                    <button @click="addTodo" class="btn btn-success ">Aggiungi</button>
                 </div>
             </div>
         </div>
