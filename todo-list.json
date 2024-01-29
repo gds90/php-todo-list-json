@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Pulire casa",
+        "done": false
+    },
+    {
+        "name": "Portare fuori il cane",
+        "done": false
+    },
+    {
+        "name": "Fare la spesa",
+        "done": false
+    },
+    {
+        "name": "Prendere appuntamento dal commercialista",
+        "done": false
+    },
+    {
+        "name": "Chiamare Nonna Concetta",
+        "done": false
+    },
+    {
+        "name": "Comprare cibo per il cane",
+        "done": false
+    },
+    {
+        "name": "Prenotare visita medica",
+        "done": false
+    },
+    {
+        "name": "Organizza partita di Padel",
+        "done": false
+    }
+]
