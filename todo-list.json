@@ -5,7 +5,7 @@
     },
     {
         "name": "Portare fuori il cane",
-        "done": false
+        "done": true
     },
     {
         "name": "Fare la spesa",
@@ -17,7 +17,7 @@
     },
     {
         "name": "Chiamare Nonna Concetta",
-        "done": false
+        "done": true
     },
     {
         "name": "Comprare cibo per il cane",

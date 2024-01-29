@@ -24,6 +24,7 @@ createApp({
             // creiamo la variabile POST
             const data = {
                 name: this.todoNew,
+                done: false
             }
 
             // passiamo la variabile appena creata alla chiamata POST 
