@@ -21,11 +21,13 @@
                     <div class="todolist-container">
                         <ul class="list-unstyled ">
                             <li v-for="todo, key in todoList" :key="key" class="d-flex ">
-                                <div class="todo_content" :class="todo.done ? 'text-decoration-line-through' : ''" @click="todoList[key].done = !todoList[key].done">
+                                <div class="todo_content" :class="todo.done ? 'text-decoration-line-through' : ''" @click="toggleTodoStatus(key)">
                                     <span>{{todo.name}}</span>
                                 </div>
                                 <div class="delete-button ms-auto ">
-                                    <button class="btn btn-danger" @click="removeTodo(key)">Elimina</button>
+                                    <button class="btn btn-success" @click="toggleTodoStatus(key)">Completato</button>
+                                    <button class="ms-1 btn btn-danger" @click="removeTodo(key)">Elimina</button>
+
                                 </div>
                             </li>
                         </ul>

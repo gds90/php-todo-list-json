@@ -21,13 +21,12 @@ createApp({
 
         // metodo per aggiungere un Todo alla lista
         addTodo() {
-            // creiamo la variabile POST
+            // creiamo l'oggetto' data
             const data = {
                 name: this.todoNew,
-                done: false
             }
 
-            // passiamo la variabile appena creata alla chiamata POST 
+            // passiamo l'oggetto appena creato alla chiamata POST 
             axios.post(this.apiUrl, data, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             }).then((response) => {
@@ -48,6 +47,18 @@ createApp({
             }).then((response) => {
                 this.todoList = response.data;
             });
+        },
+
+        // metodo per cambiare lo status di un Todo (done: true/false)
+        toggleTodoStatus(key) {
+            const data = {
+                todoIndex: key
+            }
+            axios.post(this.apiUrl, data, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            }).then((response) => {
+                this.todoList = response.data;
+            })
         }
     }
 }).mount('#app')
